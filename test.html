@@ -2,62 +2,122 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marketing Effectiveness Calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.4/babel.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f8f8;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 2rem;
+        color: #333333;
+        margin: 0;
+      }
+
+      nav ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav li {
+        margin-left: 1.5rem;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #666666;
+        font-size: 1.1rem;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #333333;
+      }
+
+      .kpi-boxes {
+        display: flex;
+        justify-content: space-around;
+        margin: 3rem 0;
+        padding: 0 2rem;
+      }
+
+      .kpi-box {
+        background-color: #ffa8B6;
+        padding: 2rem;
+        border-radius: 8px;
+        text-align: center;
+        width: 30%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .kpi-box:hover {
+        transform: translateY(-5px);
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        color: #333333;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 2rem;
+        color: #007bff;
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <script type="text/babel">
       function App() {
         return (
           <div>
-            <h1>Measuring Marketing Effectiveness Across Channels</h1>
-            <p>
-              In today's digital landscape, businesses often advertise across multiple channels - social media, search engines, email, display ads, and more. Measuring the effectiveness of these campaigns is crucial for optimizing ad spend and driving growth. Here are some key metrics to track:
-            </p>
-            <h2>Key Performance Indicators (KPIs)</h2>
-            <ul>
-              <li>
-                <strong>Return on Ad Spend (ROAS)</strong>: Revenue generated per dollar spent on ads. Calculated as (Revenue from Ads) / (Ad Spend).
-              </li>
-              <li>
-                <strong>Customer Acquisition Cost (CAC)</strong>: The cost to acquire a new customer through paid advertising. Calculated as (Ad Spend) / (Number of New Customers).
-              </li>
-              <li>
-                <strong>Conversion Rate</strong>: The percentage of ad clicks or impressions that result in a desired action, such as a purchase or signup.
-              </li>
-              <li>
-                <strong>Lifetime Value (LTV)</strong>: The total revenue a customer generates over their lifetime. Important for determining if CAC is sustainable. 
-              </li>
-            </ul>
-            <h2>Attribution Models</h2>
-            <p>
-              Attribution models help assign credit for conversions to different touchpoints in the customer journey. Common models include:
-            </p>
-            <ul>
-              <li><strong>First-Touch</strong>: Attributes 100% of the conversion value to the first channel the customer interacted with.</li>  
-              <li><strong>Last-Touch</strong>: Attributes 100% of the conversion to the last channel before the conversion.</li>
-              <li><strong>Linear</strong>: Distributes credit equally across all touchpoints.</li>
-              <li><strong>Time-Decay</strong>: Assigns more credit to touchpoints closer in time to the conversion.</li>
-            </ul>
-            <p>
-              The right attribution model depends on your business and sales cycle. Testing different models can provide valuable insights.
-            </p>
-            <h2>Calculating Overall ROI</h2>
-            <p>
-              To calculate the overall return on investment (ROI) of your marketing efforts:
-            </p>  
-            <ol>
-              <li>Sum the revenue attributed to each marketing channel using your chosen attribution model.</li>
-              <li>Divide the total attributed revenue by your total marketing spend across all channels.</li>
-              <li>Multiply by 100 to get ROI as a percentage.</li>
-            </ol>
-            <p>
-              Regularly monitoring these KPIs and ROI will help you continuously optimize your marketing mix and maximize the impact of your ad dollars.
-            </p>
+            <header>
+              <h1>Marketing Effectiveness Calculator</h1>
+              <nav>
+                <ul>
+                  <li><a href="#">HOME</a></li>
+                  <li><a href="#">CONTACT US</a></li>
+                </ul>
+              </nav>
+            </header>
+            <main>
+              <div className="kpi-boxes">
+                <div className="kpi-box">
+                  <h3>Improve Conversion Rate</h3>
+                </div>
+                <div className="kpi-box">
+                  <h3>Reduce Cost per Acquisition</h3>
+                </div>
+                <div className="kpi-box">
+                  <h3>Improve Ad ROI</h3>
+                </div>
+              </div>
+            </main>
           </div>
         );
       }
 
       ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
   </body>
 </html>
